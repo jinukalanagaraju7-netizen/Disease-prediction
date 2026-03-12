@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🩺 Disease Prediction Dashboard</h1>
+
+<a href="login.html">
+<button class="logout">Logout</button>
+</a>
+
+</header>
+
+<div class="container">
+
+<h2>Select Your Symptoms</h2>
+
+<div class="symptoms">
+
+<label><input type="checkbox" value="fever"> Fever</label>
+<label><input type="checkbox" value="cough"> Cough</label>
+<label><input type="checkbox" value="headache"> Headache</label>
+<label><input type="checkbox" value="vomiting"> Vomiting</label>
+<label><input type="checkbox" value="cold"> Cold</label>
+<label><input type="checkbox" value="fatigue"> Fatigue</label>
+<label><input type="checkbox" value="sore_throat"> Sore Throat</label>
+<label><input type="checkbox" value="body_pain"> Body Pain</label>
+<label><input type="checkbox" value="chills"> Chills</label>
+<label><input type="checkbox" value="diarrhea"> Diarrhea</label>
+
+<label><input type="checkbox" value="rash"> Skin Rash</label>
+<label><input type="checkbox" value="sweating"> Sweating</label>
+<label><input type="checkbox" value="dizziness"> Dizziness</label>
+<label><input type="checkbox" value="stomach_pain"> Stomach Pain</label>
+<label><input type="checkbox" value="nausea"> Nausea</label>
+<label><input type="checkbox" value="breath"> Breathing Problem</label>
+<label><input type="checkbox" value="loss_taste"> Loss of Taste</label>
+<label><input type="checkbox" value="loss_smell"> Loss of Smell</label>
+<label><input type="checkbox" value="joint_pain"> Joint Pain</label>
+<label><input type="checkbox" value="weakness"> Weakness</label>
+
+</div>
+
+<button onclick="predict()">Predict Disease</button>
+
+<div class="result-box">
+<h2 id="result">Select symptoms and click predict</h2>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
