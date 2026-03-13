@@ -1,63 +1,46 @@
-body{
-font-family:Arial;
-text-align:center;
+window.onload=function(){
 
-background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1,#84fab0,#8fd3f4);
-background-size:400% 400%;
-animation:gradient 10s ease infinite;
-}
-
-@keyframes gradient{
-
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+setTimeout(function(){
+document.getElementById("doors").classList.add("open");
+},1000);
 
 }
 
-.login-box{
+function register(){
 
-margin-top:150px;
-background:white;
-display:inline-block;
-padding:40px;
-border-radius:10px;
+var user=document.getElementById("newuser").value;
+var pass=document.getElementById("newpass").value;
 
-}
+localStorage.setItem("username",user);
+localStorage.setItem("password",pass);
 
-input{
-
-padding:10px;
-margin:10px;
-width:200px;
+alert("Account Created Successfully");
 
 }
 
-button{
+function showRegister(){
 
-padding:10px 20px;
-background:#ff416c;
-color:white;
-border:none;
-border-radius:6px;
-cursor:pointer;
+document.getElementById("register").style.display="block";
 
 }
 
-.symptoms{
+function login(){
 
-display:grid;
-grid-template-columns:repeat(4,200px);
-gap:10px;
-justify-content:center;
-margin-top:40px;
+var user=document.getElementById("username").value;
+var pass=document.getElementById("password").value;
+
+var savedUser=localStorage.getItem("username");
+var savedPass=localStorage.getItem("password");
+
+if(user==savedUser && pass==savedPass){
+
+window.location="dashboard.html";
 
 }
+else{
 
-label{
+document.getElementById("error").innerHTML="Invalid Login";
 
-background:white;
-padding:10px;
-border-radius:6px;
+}
 
 }
