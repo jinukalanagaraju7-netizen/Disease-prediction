@@ -1,29 +1,3 @@
-window.onload=function(){
-
-setTimeout(function(){
-document.getElementById("doors").classList.add("open");
-},1000);
-
-}
-
-function register(){
-
-var user=document.getElementById("newuser").value;
-var pass=document.getElementById("newpass").value;
-
-localStorage.setItem("username",user);
-localStorage.setItem("password",pass);
-
-alert("Account Created Successfully");
-
-}
-
-function showRegister(){
-
-document.getElementById("register").style.display="block";
-
-}
-
 function login(){
 
 var user=document.getElementById("username").value;
@@ -32,14 +6,16 @@ var pass=document.getElementById("password").value;
 var savedUser=localStorage.getItem("username");
 var savedPass=localStorage.getItem("password");
 
-if(user==savedUser && pass==savedPass){
+if(user===savedUser && pass===savedPass){
 
-window.location="dashboard.html";
+alert("Login Successful");
+
+window.location.href="dashboard.html";
 
 }
 else{
 
-document.getElementById("error").innerHTML="Invalid Login";
+document.getElementById("error").innerHTML="Invalid Username or Password";
 
 }
 
