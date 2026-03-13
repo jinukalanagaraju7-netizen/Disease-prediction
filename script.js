@@ -1,35 +1,63 @@
-function predict(){
+body{
+font-family:Arial;
+text-align:center;
 
-var checked = document.querySelectorAll('input[type=checkbox]:checked');
-
-var symptoms = [];
-
-checked.forEach(function(item){
-symptoms.push(item.value);
-});
-
-var disease="Unknown Disease";
-
-if(symptoms.includes("fever") && symptoms.includes("cough") && symptoms.includes("breath")){
-disease="COVID-19";
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1,#84fab0,#8fd3f4);
+background-size:400% 400%;
+animation:gradient 10s ease infinite;
 }
 
-else if(symptoms.includes("fever") && symptoms.includes("body_pain") && symptoms.includes("chills")){
-disease="Malaria";
+@keyframes gradient{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
 }
 
-else if(symptoms.includes("rash") && symptoms.includes("fever")){
-disease="Dengue";
+.login-box{
+
+margin-top:150px;
+background:white;
+display:inline-block;
+padding:40px;
+border-radius:10px;
+
 }
 
-else if(symptoms.includes("vomiting") && symptoms.includes("diarrhea") && symptoms.includes("stomach_pain")){
-disease="Food Poisoning";
+input{
+
+padding:10px;
+margin:10px;
+width:200px;
+
 }
 
-else if(symptoms.includes("headache") && symptoms.includes("nausea")){
-disease="Migraine";
+button{
+
+padding:10px 20px;
+background:#ff416c;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+
 }
 
-document.getElementById("result").innerHTML="Possible Disease: "+disease;
+.symptoms{
+
+display:grid;
+grid-template-columns:repeat(4,200px);
+gap:10px;
+justify-content:center;
+margin-top:40px;
+
+}
+
+label{
+
+background:white;
+padding:10px;
+border-radius:6px;
 
 }
